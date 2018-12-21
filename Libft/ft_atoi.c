@@ -6,7 +6,7 @@
 /*   By: lcutjack <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/21 13:39:01 by lcutjack          #+#    #+#             */
-/*   Updated: 2018/12/20 20:46:22 by lcutjack         ###   ########.fr       */
+/*   Updated: 2018/12/21 15:23:54 by lcutjack         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,13 @@ int	ft_atoi(const char *s)
 	}
 	while (s[i] && s[i] <= '9' && s[i] >= '0')
 	{
-		prev = new;
-		new = new * 10 + sign * (s[i++] - '0');
-		if (sign > 0 && new < prev)
-			return (-1);
-		if (sign < 0 && new > prev)
-			return (0);
+		if (new * 10 / 10 != new)
+			return (sign == 1 ? -1 : 0);
+		new = new * 10;
+		if ((new += s[i] - '0') < 0)
+		   return (sign == 1 ? -1 : 0);
+		new += s[i] - '0';
+		i++;
 	}
-	return ((int)new);
+	return (sign * (int)new);
 }
