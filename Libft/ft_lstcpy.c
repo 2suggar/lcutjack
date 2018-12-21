@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_lstcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lcutjack <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/02 15:15:33 by lcutjack          #+#    #+#             */
-/*   Updated: 2018/12/21 14:40:31 by lcutjack         ###   ########.fr       */
+/*   Created: 2018/12/21 12:01:45 by lcutjack          #+#    #+#             */
+/*   Updated: 2018/12/21 14:40:56 by lcutjack         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-void	ft_lstdelone(t_list **alst, void (*del)(void*, size_t))
+t_list	*ft_lstcpy(t_list *lst)
 {
-	if (!alst || !(*alst)->content)
-		return ;
-	del((*alst)->content, (*alst)->content_size);
-	free(*alst);
-	*alst = NULL;
+	t_list	*new;
+
+	if (!lst)
+		return (NULL);
+	new = ft_lstnew(lst->content, lst->content_size);
+	return (new);
 }

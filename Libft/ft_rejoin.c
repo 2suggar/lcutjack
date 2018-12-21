@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_rejoin.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lcutjack <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/02 15:15:33 by lcutjack          #+#    #+#             */
-/*   Updated: 2018/12/21 14:40:31 by lcutjack         ###   ########.fr       */
+/*   Created: 2018/12/21 11:55:17 by lcutjack          #+#    #+#             */
+/*   Updated: 2018/12/21 11:58:56 by lcutjack         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-void	ft_lstdelone(t_list **alst, void (*del)(void*, size_t))
+char	*ft_rejoin(char *a, char *b)
 {
-	if (!alst || !(*alst)->content)
-		return ;
-	del((*alst)->content, (*alst)->content_size);
-	free(*alst);
-	*alst = NULL;
+	char	*new;
+
+	new = ft_strjoin(a, b);
+	free(a);
+	free(b);
+	a = NULL;
+	b = NULL;
+	return (new);
 }

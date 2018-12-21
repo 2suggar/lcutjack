@@ -6,7 +6,7 @@
 /*   By: lcutjack <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/02 16:55:30 by lcutjack          #+#    #+#             */
-/*   Updated: 2018/12/03 14:39:43 by lcutjack         ###   ########.fr       */
+/*   Updated: 2018/12/21 14:39:20 by lcutjack         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_lstadd(t_list **alst, t_list *new)
 {
+	if (!alst)
+		return ;
 	new->next = *alst;
 	*alst = new;
 }

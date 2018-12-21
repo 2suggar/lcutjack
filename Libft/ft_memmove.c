@@ -6,7 +6,7 @@
 /*   By: lcutjack <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/23 19:00:21 by lcutjack          #+#    #+#             */
-/*   Updated: 2018/12/02 18:27:45 by lcutjack         ###   ########.fr       */
+/*   Updated: 2018/12/21 14:38:26 by lcutjack         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	unsigned char	*new;
 	unsigned char	*frm;
 
+	if (dst == src)
+		return (dst);
 	new = (unsigned char*)dst;
 	frm = (unsigned char*)src;
 	if (frm > new)

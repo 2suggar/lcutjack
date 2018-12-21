@@ -6,7 +6,7 @@
 #    By: lcutjack <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/24 16:27:08 by lcutjack          #+#    #+#              #
-#    Updated: 2018/12/04 17:40:10 by lcutjack         ###   ########.fr        #
+#    Updated: 2018/12/21 12:39:15 by lcutjack         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,8 @@ SRC = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c ft_memchr.c \
 	  ft_itoa.c ft_putchar.c ft_putstr.c ft_putendl.c ft_putnbr.c \
 	  ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
 	  ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c \
-	  ft_lstmap.c ft_lstadd_into.c ft_lstsize.c
+	  ft_lstmap.c ft_lstadd_into.c ft_lstsize.c ft_replace.c ft_rejoin.c \
+	  ft_lstcpy.c ft_del.c
 INC = libft.h
 OBJ = $(SRC:.c=.o)
 
