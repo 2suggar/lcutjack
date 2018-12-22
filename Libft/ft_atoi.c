@@ -36,7 +36,6 @@ int	ft_atoi(const char *s)
 		new = new * 10;
 		if ((new += s[i] - '0') < 0)
 		   return (sign == 1 ? -1 : 0);
-		new += s[i] - '0';
 		i++;
 	}
 	return (sign * (int)new);
