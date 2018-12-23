@@ -12,12 +12,12 @@
 
 #include "libft.h"
 
-void	ft_replace(char **s, char ts, char on)
+void	ft_replace(char *s, char ts, char on)
 {
-	while (**s)
+	while (*s)
 	{
-		if (**s == ts)
-			**s = on;
-		(*s)++;
+		if (*s == ts)
+			*s = on;
+		s++;
 	}
 }
