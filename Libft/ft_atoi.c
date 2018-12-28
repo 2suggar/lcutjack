@@ -16,7 +16,6 @@ int	ft_atoi(const char *s)
 {
 	size_t		i;
 	long long	new;
-	long long	prev;
 	int			sign;
 
 	i = 0;
