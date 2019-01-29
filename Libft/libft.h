@@ -82,7 +82,7 @@ void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 void				ft_lstadd_into(t_list **lst, t_list *new);
 size_t				ft_lstsize(t_list *lst);
-void				ft_replace(char **s, char ts, char on);
+void				ft_replace(char *s, char ts, char on);
 char				*ft_rejoin(char *a, char *b);
 t_list				*ft_lstcpy(t_list *lst);
 void				ft_del(void *mem, size_t len);
